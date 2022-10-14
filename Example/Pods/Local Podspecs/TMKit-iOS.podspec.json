@@ -1,6 +1,6 @@
 {
   "name": "TMKit-iOS",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "summary": "Solutions dedicated to improving project development efficiency",
   "description": "TMKit is a solution dedicated to improving the efficiency of project development. It is designed to allow developers to focus on business needs without spending energy on basic code design. Whether it is the creation of new projects or the maintenance of existing projects, development efficiency and project quality can be greatly improved.",
   "homepage": "https://github.com/TMPub/TMKit-iOS",
@@ -12,7 +12,7 @@
     "jieyuan.zhuang": "jieyuan.zhuang@transsnet.com"
   },
   "source": {
-    "http": "file:/Users/john/Documents/Work/TMKit-iOS/Framework.zip"
+    "http": "https://github.com/TMPub/TMKit-iOS/archive/refs/tags/#{s.version}.zip"
   },
   "vendored_frameworks": "Framework/TMKit.xcframework",
   "platforms": {
@@ -23,6 +23,8 @@
     "UIKit",
     "CoreGraphics"
   ],
+  "requires_arc": true,
+  "static_framework": true,
   "dependencies": {
     "FMDB-InOperator": [
 

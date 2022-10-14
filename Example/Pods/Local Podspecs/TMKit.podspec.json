@@ -1,0 +1,207 @@
+{
+  "name": "TMKit",
+  "version": "0.5.6",
+  "summary": "Solutions dedicated to improving project development efficiency",
+  "description": "TMKit is a solution dedicated to improving the efficiency of project development. It is designed to allow developers to focus on business needs without spending energy on basic code design. Whether it is the creation of new projects or the maintenance of existing projects, development efficiency and project quality can be greatly improved.",
+  "homepage": "https://gitlab.boomplaymusic.com:8000/FED/iOS/TMKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "frank-du": "frank.du@transsnet.com"
+  },
+  "source": {
+    "git": "https://gitlab.boomplaymusic.com:8000/FED/iOS/TMKit.git",
+    "tag": "0.5.6"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "frameworks": [
+    "Foundation",
+    "UIKit",
+    "CoreGraphics"
+  ],
+  "source_files": "TMKit/TMKit.h",
+  "subspecs": [
+    {
+      "name": "TMMacro",
+      "source_files": "TMKit/TMMacro/*.{h,m}"
+    },
+    {
+      "name": "TMModel",
+      "source_files": "TMKit/TMModel/*.{h,m}"
+    },
+    {
+      "name": "TMExtensions",
+      "source_files": "TMKit/TMExtensions/*.{h,m}",
+      "subspecs": [
+        {
+          "name": "Foundation",
+          "source_files": "TMKit/TMExtensions/Foundation/*.{h,m}",
+          "dependencies": {
+            "TMKit/TMUtil/TMDateFormatterFactory": [
+
+            ]
+          }
+        },
+        {
+          "name": "UIKit",
+          "source_files": "TMKit/TMExtensions/UIKit/*.{h,m}",
+          "dependencies": {
+            "TMKit/TMMacro": [
+
+            ]
+          }
+        },
+        {
+          "name": "Quartz",
+          "source_files": "TMKit/TMExtensions/Quartz/*.{h,m}"
+        },
+        {
+          "name": "WebKit",
+          "source_files": "TMKit/TMExtensions/WebKit/*.{h,m}"
+        }
+      ]
+    },
+    {
+      "name": "TMUI",
+      "source_files": "TMKit/TMUI/*.{h,m}",
+      "dependencies": {
+        "TMKit/TMMacro": [
+
+        ]
+      }
+    },
+    {
+      "name": "TMNetworking",
+      "source_files": [
+        "TMKit/TMNetworking/*.h",
+        "TMKit/TMNetworking/API/*.{h,m}",
+        "TMKit/TMNetworking/HTTPDNS/*.{h,m}",
+        "TMKit/TMNetworking/Request/*.{h,m}",
+        "TMKit/TMNetworking/Logger/*.{h,m}"
+      ],
+      "dependencies": {
+        "AFNetworking": [
+          "~> 4.0"
+        ],
+        "TMKit/TMMacro": [
+
+        ],
+        "TMKit/TMExtensions/Foundation": [
+
+        ]
+      }
+    },
+    {
+      "name": "TMEVL",
+      "source_files": "TMKit/TMEVL/*.h",
+      "subspecs": [
+        {
+          "name": "TMEVLLogger",
+          "source_files": "TMKit/TMEVL/TMEVLLogger/*.{h,m}",
+          "dependencies": {
+            "TMKit/TMMacro": [
+
+            ],
+            "TMKit/TMUtil/TMReachability": [
+
+            ]
+          }
+        },
+        {
+          "name": "TMEVLLoggerImps",
+          "source_files": "TMKit/TMEVL/TMEVLLoggerImps/*.{h,m}",
+          "dependencies": {
+            "TMKit/TMModel": [
+
+            ],
+            "TMKit/TMExtensions/Foundation": [
+
+            ],
+            "TMKit/TMDeviceUtil": [
+
+            ],
+            "TMKit/TMEVL/TMEVLLogger": [
+
+            ],
+            "TMKit/TMNetworking": [
+
+            ],
+            "FMDB-InOperator": [
+
+            ],
+            "GZIP": [
+
+            ]
+          }
+        },
+        {
+          "name": "TMEVLTrack",
+          "source_files": "TMKit/TMEVL/TMEVLTrack/*.{h,m}",
+          "dependencies": {
+            "RSSwizzle": [
+
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "TMUtil",
+      "source_files": "TMKit/TMUtil/*h",
+      "subspecs": [
+        {
+          "name": "TMReachability",
+          "source_files": "TMKit/TMUtil/TMReachability/*.{h,m}"
+        },
+        {
+          "name": "TMTimer",
+          "source_files": "TMKit/TMUtil/TMTimer/*.{h,m}"
+        },
+        {
+          "name": "TMGrouping",
+          "source_files": "TMKit/TMUtil/TMGrouping/*.{h,m}"
+        },
+        {
+          "name": "TMDateFormatterFactory",
+          "source_files": "TMKit/TMUtil/TMDateFormatterFactory/*.{h,m}"
+        },
+        {
+          "name": "TMWeakObjectContainer",
+          "source_files": "TMKit/TMUtil/TMWeakObjectContainer/*.{h,m}"
+        },
+        {
+          "name": "TMCookieManager",
+          "source_files": "TMKit/TMUtil/TMCookieManager/*.{h,m}"
+        }
+      ]
+    },
+    {
+      "name": "TMKVStorage",
+      "source_files": "TMKit/TMKVStorage/*.{h,m}",
+      "dependencies": {
+        "FMDB": [
+          "~> 2.7"
+        ]
+      }
+    },
+    {
+      "name": "TMDeviceUtil",
+      "source_files": "TMKit/TMDeviceUtil/*.{h,m}",
+      "dependencies": {
+        "UICKeyChainStore": [
+
+        ],
+        "GBDeviceInfo": [
+
+        ],
+        "TMKit/TMExtensions/Foundation": [
+
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+framework module FMDB_InOperator {
+  umbrella header "FMDB-InOperator-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'jieyuan.zhuang' => 'jieyuan.zhuang@transsnet.com' }
     s.source            = { :http => 'file:' + __dir__ + '/Framework.zip' }
-    s.vendored_frameworks = 'Framework/TMKit.xcframework'
+    s.vendored_frameworks = 'TMKit.xcframework'
     
     s.platform         = :ios, '11.0'
     s.frameworks       = 'Foundation', 'UIKit', 'CoreGraphics'

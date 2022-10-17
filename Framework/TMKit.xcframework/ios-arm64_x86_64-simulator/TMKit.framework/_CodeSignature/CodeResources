@@ -84,10 +84,6 @@
 		<data>
 		9uVVIwfiYZThhrBvQ8eNjVkYwtM=
 		</data>
-		<key>Headers/TMClassInfo.h</key>
-		<data>
-		rHpERw8lW2sPNjAQ3cznuEkddXw=
-		</data>
 		<key>Headers/TMCookieManager.h</key>
 		<data>
 		9g7721i5bXoQSNtneO1sdMIN3bk=
@@ -158,7 +154,7 @@
 		</data>
 		<key>Headers/TMFoundationExtensions.h</key>
 		<data>
-		qLm0uQf/h8ChST8yarclwKN58So=
+		oTE7LML6sjc6Ew4Ft2SByulFGFI=
 		</data>
 		<key>Headers/TMGCDTimerManager.h</key>
 		<data>
@@ -280,10 +276,6 @@
 		<data>
 		IVuw34g8mdTz9bZUIoT4vBOCIaE=
 		</data>
-		<key>Headers/TMStringPrivate.h</key>
-		<data>
-		fVB4f+GQhFFR7MUkqUFrRauieiQ=
-		</data>
 		<key>Headers/TMTimer.h</key>
 		<data>
 		LoSmuioSQJ/YqaDLMl3rvAZHBOM=
@@ -294,7 +286,7 @@
 		</data>
 		<key>Headers/TMUIKitExtensions.h</key>
 		<data>
-		A9LA6dzeQdNTwLDs29COYeK+ZiM=
+		uP1GgGGAWHWy4aaXc5FLhq7suQY=
 		</data>
 		<key>Headers/TMUtil.h</key>
 		<data>
@@ -386,7 +378,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		WIZ7aLpB7N+vreWbjz9L+X2h87M=
+		uiVhvjgUvjXefK7K7sskME4rp9w=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -615,17 +607,6 @@
 			NeelHbztchpW/lijiVgu3PEh/Q8JhoBbVIgcvlbfwhg=
 			</data>
 		</dict>
-		<key>Headers/TMClassInfo.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			rHpERw8lW2sPNjAQ3cznuEkddXw=
-			</data>
-			<key>hash2</key>
-			<data>
-			IdR03J2b7gpT5hXrFtiqwucU+AmZdrfX95NVzfoUiJo=
-			</data>
-		</dict>
 		<key>Headers/TMCookieManager.h</key>
 		<dict>
 			<key>hash</key>
@@ -817,11 +798,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qLm0uQf/h8ChST8yarclwKN58So=
+			oTE7LML6sjc6Ew4Ft2SByulFGFI=
 			</data>
 			<key>hash2</key>
 			<data>
-			SrPJK9CimzYWIFFyf7pwwJ7gEWMLiTXDgc99+SxDOzc=
+			P0P92TlMI4nMXdDEkELbFG4hXH8OmNrQl1aMtzvZ+mE=
 			</data>
 		</dict>
 		<key>Headers/TMGCDTimerManager.h</key>
@@ -1154,17 +1135,6 @@
 			lrtwHCp6SiKHoBse7dt13ZPrwbOu0+SKQ3Tais4HKqU=
 			</data>
 		</dict>
-		<key>Headers/TMStringPrivate.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			fVB4f+GQhFFR7MUkqUFrRauieiQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			D9Ghg2zsOHdRM47PrbjBPzQmdMmpovdv1bivO7V3GBU=
-			</data>
-		</dict>
 		<key>Headers/TMTimer.h</key>
 		<dict>
 			<key>hash</key>
@@ -1191,11 +1161,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			A9LA6dzeQdNTwLDs29COYeK+ZiM=
+			uP1GgGGAWHWy4aaXc5FLhq7suQY=
 			</data>
 			<key>hash2</key>
 			<data>
-			DntysZFNrJSNCquLRk5nu5urSJMIcCnsfUCZNsbRwP0=
+			3pJnDyVhvFI0rzYr+bA9NQ+s/TB8XbM5QsV/NcHQNyE=
 			</data>
 		</dict>
 		<key>Headers/TMUtil.h</key>

@@ -1,6 +1,6 @@
 //
 //  UIImage+TMExtension.h
-//  TMExtension
+//  TMExtensions
 //
 //  Created by TMKi on 2018/3/21.
 //  Copyright © 2018年 TMKit. All rights reserved.
@@ -24,6 +24,10 @@
 /// 图片尺寸修改
 /// @param newSize 修改后的size
 - (UIImage *)tm_scaleToSize:(CGSize)newSize;
+
+/// 图片尺寸修改
+/// @param scale 修改后的scale
+- (UIImage *)tm_scaleTo:(CGFloat)scale;
 
 /// 图片裁剪
 /// @param rect 单位为像素px
@@ -49,5 +53,9 @@
 /// 截图
 /// @param aView view
 + (UIImage *)tm_imageWithView:(__kindof UIView *)aView;
+
+/// 添加水印
+/// @param markText 水印文字
+- (UIImage *)tm_addWatermark:(NSString *)markText;
 
 @end

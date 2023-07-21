@@ -1,6 +1,6 @@
 //
 //  UIColor+TMExtension.h
-//  TMExtension
+//  TMExtensions
 //
 //  Created by TMKit on 2021/8/17.
 //
@@ -11,18 +11,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (TMExtension)
 
-+ (UIColor *)tm_colorWithRGBString:(NSString *)RGBString;
++ (nullable UIColor *)tm_colorWithRGBString:(NSString *)RGBString;
 
-+ (UIColor *)tm_colorWithRGBString:(NSString *)RGBString alpha:(CGFloat)alpha;
++ (nullable UIColor *)tm_colorWithRGBString:(NSString *)RGBString alpha:(CGFloat)alpha;
 
 /// "#0D0D0D" -> UIColor
 /// @param hexString "#0D0D0D"
-+ (UIColor *)tm_colorWithHexString:(NSString *)hexString;
++ (nullable UIColor *)tm_colorWithHexString:(NSString *)hexString;
 
 /// "#0D0D0D" -> UIColor
 /// @param hexString "#0D0D0D"
 /// @param alpha 透明度
-+ (UIColor *)tm_colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha;
++ (nullable UIColor *)tm_colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha;
 
 /// UIColor -> HexString
 - (NSString *)tm_transformToNoAlphaHexString;

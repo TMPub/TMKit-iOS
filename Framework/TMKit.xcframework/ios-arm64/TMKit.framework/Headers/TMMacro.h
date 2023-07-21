@@ -25,7 +25,7 @@ safeAreaBottom = [UIApplication sharedApplication].delegate.window.safeAreaInset
 }\
 (safeAreaBottom);})
 
-#define STATUS_BAR_HEIGHT ([[UIApplication sharedApplication] statusBarFrame].size.height > 0 ? [[UIApplication sharedApplication] statusBarFrame].size.height : (TARGETED_DEVICE_IS_ALL_SCREEN ? 44.f : 20.f))
+#define STATUS_BAR_HEIGHT ([[TMDeviceUtil shareUtil] statusBarHeightConstant])
 #define NAVIGATION_BAR_HEIGHT  (44.f)
 #define TOP_BAR_HEIGHT (STATUS_BAR_HEIGHT + NAVIGATION_BAR_HEIGHT)
 #define TAB_BAR_HEIGHT (56.f)
@@ -51,12 +51,6 @@ if (@available(iOS 11.0, *)) {\
 isAllScreen = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
 }\
 (isAllScreen);})  // 是否是全面屏
-
-#define IOS_VERSION                              [[UIDevice currentDevice] systemVersion]
-#define IOS_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([IOS_VERSION compare:v options:NSNumericSearch] != NSOrderedAscending)
-#define IOS_VERSION_LESS_THAN(v)                 ([IOS_VERSION compare:v options:NSNumericSearch] == NSOrderedAscending)
-
-#define BUNDLE_INFO            [[NSBundle mainBundle] infoDictionary]
 
 #define MARK_DEPRECATED(DESCRIPTION) __attribute__((deprecated(DESCRIPTION)))
 
@@ -153,6 +147,11 @@ dispatch_semaphore_signal(_lock);
 
 #define kDicIsEmpty(dic) (dic == nil || ![dic isKindOfClass:[NSDictionary class]] || [dic count] < 1 ? YES : NO)
 
+/** @brief Returns YES if both arguments are `nil` or equal, NO otherwise. */
+NS_INLINE BOOL tmBothNilOrEqual(id first, id second) {
+    return (first == nil && second == nil) || ([first isEqual:second]);
+}
+
 #pragma mark -  ============================ typedef ============================
 typedef void (^TMVoidBlock)(void);
 
@@ -182,7 +181,7 @@ NS_INLINE NSException * tryBlock(void(^ tryBlock)(void)) {
 
 #define NSDICT(firstKey, ...) NSDictionaryWithKeysAndValues(firstKey, __VA_ARGS__)
 
-static __attribute__ ((sentinel)) NSDictionary * NSDictionaryWithKeysAndValues(id firstKey, ...) {
+static __attribute__ ((sentinel, unused)) NSDictionary * NSDictionaryWithKeysAndValues(id firstKey, ...) {
     va_list kvl;
     va_start(kvl, firstKey);
     
@@ -771,4 +770,9 @@ NSContainingRanges(NSRange outerRange, NSRange innerRange) {
         return YES;
     }
     return NO;
+}
+
+CG_INLINE CGRect
+CGRectMakeScreenCenter(CGFloat width, CGFloat height) {
+    return CGRectMake((SCREEN_WIDTH-width)/2, (SCREEN_HEIGHT-height)/2, width, height);
 }

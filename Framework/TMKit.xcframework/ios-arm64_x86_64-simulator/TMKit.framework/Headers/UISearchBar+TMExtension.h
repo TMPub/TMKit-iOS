@@ -1,6 +1,6 @@
 //
 //  UISearchBar+TMExtension.h
-//  TMExtension
+//  TMExtensions
 //
 //  Created by TMKit on 2019/9/26.
 //  Copyright © 2019 TMKit. All rights reserved.

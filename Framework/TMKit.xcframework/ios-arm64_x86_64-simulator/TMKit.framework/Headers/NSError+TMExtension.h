@@ -1,6 +1,6 @@
 //
 //  NSError+TMExtension.h
-//  TMExtension
+//  TMExtensions
 //
 //  Created by TMKit on 2022/5/12.
 //  Copyright © 2022 TMKit. All rights reserved.

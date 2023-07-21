@@ -1,6 +1,6 @@
 //
 //  NSString+TMExtension.h
-//  TMExtension
+//  TMExtensions
 //
 //  Created by TMKit on 2018/6/29.
 //  Copyright © 2018年 TMKit. All rights reserved.
@@ -88,6 +88,29 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable instancetype)tm_stringByRemoveLastCharacter;
 
+/// 获取指定宽度内的字符串
+/// @param width 指定的宽度
+/// @param font 字体
+/// @param breakByChar 是否以字符为单位截断
+- (NSRange)tm_rangeWithWidth:(CGFloat)width font:(UIFont *)font breakByChar:(BOOL)breakByChar;
+
+/// 获取字符串在指定宽度内显示的行数
+/// @param width 指定宽度
+/// @param font 字体
+- (NSInteger)tm_lineCountWithWidth:(CGFloat)width Font:(UIFont *)font;
+
+/// 字符串在给定宽度显示的每一行
+/// @param width 给定宽度
+/// @param font 字体
+- (NSArray *)tm_multilineStringsWithWidth:(CGFloat)width font:(UIFont *)font;
+
+/// 字符串在给定宽度显示的每一行
+/// @param width 给定的宽度
+/// @param font 字体
+/// @param breakLine 最后一行
+/// @param breakByChar 是否以字符为单位换行
+- (NSArray *)tm_multilineStringsWithWidth:(CGFloat)width font:(UIFont *)font breakLineIndex:(NSInteger)breakLine breakByChar:(BOOL)breakByChar;
+
 @end
 
 @interface NSString (TMExtension) <TMStringProtocol>
@@ -116,9 +139,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSMutableArray *)tm_getArrayByMatchStringToRegexString:(NSString *)regexStr;
 
-- (NSDictionary *)tm_toDictionary;
+- (nullable NSDictionary *)tm_toDictionary;
 
-- (NSArray *)tm_toArray;
+- (nullable NSArray *)tm_toArray;
 
 #pragma mark - 文本高度计算
 
@@ -211,7 +234,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param pattern 正则表达式
  @return 匹配到的第一个结果，如果没有匹配成功则返回 nil
  */
-- (NSString *)tm_stringMatchedByPattern:(NSString *)pattern;
+- (nullable NSString *)tm_stringMatchedByPattern:(NSString *)pattern;
 
 /**
  用正则表达式匹配字符串，返回匹配到的第一个结果里的指定分组（由参数 index 指定）。
@@ -220,7 +243,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param index 要返回第几个分组，0表示整个正则表达式匹配到的结果，1表示匹配到的结果里的第1个分组（第1个括号）
  @return 返回匹配到的第一个结果里的指定分组，如果 index 超过总分组数则返回 nil。匹配失败也返回 nil。
  */
-- (NSString *)tm_stringMatchedByPattern:(NSString *)pattern groupIndex:(NSInteger)index;
+- (nullable NSString *)tm_stringMatchedByPattern:(NSString *)pattern groupIndex:(NSInteger)index;
 
 /**
  用正则表达式匹配字符串，返回匹配到的第一个结果里的指定分组（由参数 name 指定）。
@@ -229,7 +252,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param name 要返回的分组名称，可通过 pattern 里的 ?<name> 语法对分组进行命名。
  @return 返回匹配到的第一个结果里的指定分组，如果 name 不存在则返回 nil。匹配失败也返回 nil。
  */
-- (NSString *)tm_stringMatchedByPattern:(NSString *)pattern groupName:(NSString *)name;
+- (nullable NSString *)tm_stringMatchedByPattern:(NSString *)pattern groupName:(NSString *)name;
 
 /**
  *  用正则表达式匹配字符串并将其替换为指定的另一个字符串，大小写不敏感
@@ -249,6 +272,9 @@ NS_ASSUME_NONNULL_BEGIN
  * 将秒数转换为同时包含分钟和秒数的格式的字符串，例如 100->"01:40"
  */
 + (NSString *)tm_timeStringWithMinsAndSecsFromSecs:(double)seconds;
+
+/// 将单行的 String 按照限制条件裁剪为多行的数组
+- (NSArray *)tm_multilineStringsWithWidth:(CGFloat)width font:(UIFont *)font;
 
 @end
 

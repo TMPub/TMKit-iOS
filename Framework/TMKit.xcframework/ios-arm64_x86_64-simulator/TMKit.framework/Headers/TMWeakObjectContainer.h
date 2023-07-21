@@ -17,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 将一个 object 包装到一个 TMWeakObjectContainer 里
 - (instancetype)initWithObject:(id)object;
-- (instancetype)init;
 + (instancetype)containerWithObject:(id)object;
 
 /// 获取原始对象 object，如果 object 已被释放则该属性返回 nil

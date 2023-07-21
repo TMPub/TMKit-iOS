@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 成功信息，由 Interceptor 自定义解析，并交给上层自行显示
 @property (nonatomic, strong, nullable) NSString *message;
 
+@property (nonatomic, strong) NSURLSessionTaskTransactionMetrics *metrics;
+
 + (instancetype)responseWithURLResponse:(nullable NSHTTPURLResponse *)urlResponse
                          responseObject:(nullable id)responseObject
                                   error:(nullable NSError *)error;

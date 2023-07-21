@@ -22,5 +22,6 @@
 #import "NSString+TMCheck.h"
 #import "NSString+TMExtension.h"
 #import "NSURL+TMExtension.h"
+#import "NSObject+TMSemaphore.h"
 
 #endif /* TMFoundationExtensions_h */

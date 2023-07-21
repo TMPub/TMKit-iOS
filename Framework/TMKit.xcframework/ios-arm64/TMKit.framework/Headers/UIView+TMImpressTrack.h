@@ -37,7 +37,7 @@ typedef void (^TMImpressTrackBlock)(BOOL visible);
 @property (nonatomic, copy, nullable) TMImpressTrackBlock tm_visibleBlock;
 
 /// 内部方法
-+ (void)swizzle;
++ (void)tmSwizzle;
 
 @end
 

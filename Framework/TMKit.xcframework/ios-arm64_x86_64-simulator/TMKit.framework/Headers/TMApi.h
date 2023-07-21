@@ -19,7 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 
-- (void)api:(TMApi *)api failedWithUrlString:(NSString *)urlString afterError:(NSError *)error domain:(NSString *)domain isFinal:(NSUInteger)isFinal;
+- (void)api:(TMApi *)api failedWithUrlString:(NSString *)urlString afterError:(NSError *)error domain:(NSString *)domain isFinal:(NSUInteger)isFinal metrics:(NSURLSessionTaskTransactionMetrics *)metrics;
+
+- (void)api:(TMApi *)api successfulWithUrlString:(NSString *)urlString domain:(NSString *)domain metrics:(NSURLSessionTaskTransactionMetrics *)metrics;
 
 @end
 
@@ -82,6 +84,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 所有重试请求中额外增加的域名在所有域名中的位置，必须大于 0
 @property (nonatomic, assign) NSInteger additionDomainIndex;
+
+/// TMLogger.shared.isDebug 为 True 且有值时，会使用 mainBundle 的 JSON 文件进行 Mock
+@property (nonatomic, copy) NSString *mockJsonPath;
 
 /// 请求上传文件包
 @property (nonatomic, copy, nullable) void(^requestConstructingBody)(id<AFMultipartFormData> formData);

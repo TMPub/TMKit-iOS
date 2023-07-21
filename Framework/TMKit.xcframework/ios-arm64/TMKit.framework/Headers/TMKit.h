@@ -46,4 +46,8 @@
 #import "TMUI.h"
 #endif
 
+#if __has_include("TMLive.h")
+#import "TMLive.h"
+#endif
+
 #endif /* TMKit_h */

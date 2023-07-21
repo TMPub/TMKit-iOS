@@ -1,6 +1,6 @@
 //
 //  NSString+TMCheck.h
-//  TMExtension
+//  TMExtensions
 //
 //  Created by TMKit on 2018/6/29.
 //  Copyright © 2018年 TMKit. All rights reserved.
@@ -33,6 +33,7 @@
 /// 邮箱校验
 - (BOOL)tm_isEmailExpression;
 
+/// IP 地址校验
 - (BOOL)tm_isIPAddress;
 
 /// 字符串不为空

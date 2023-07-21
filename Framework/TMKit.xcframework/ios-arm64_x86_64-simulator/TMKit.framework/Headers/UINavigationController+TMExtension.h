@@ -41,6 +41,7 @@ typedef NS_ENUM(NSUInteger, TMPushOptions) {
 - (nullable NSArray<__kindof UIViewController *> *)tm_popToRootViewControllerAnimated:(BOOL)animated;
 
 /// Pop到一个UIViewController实例
+/// 如果出现异常（如：viewController为空/不在当前栈内），返回为空，并且无pop行为
 /// @param viewController viewController实例
 /// @param animated 是否有动画
 - (nullable NSArray<__kindof UIViewController *> *)tm_popToViewController:(UIViewController *)viewController animated:(BOOL)animated;
@@ -64,7 +65,7 @@ typedef NS_ENUM(NSUInteger, TMPushOptions) {
 - (void)tm_removeViewControllerClass:(Class)viewControllerClass;
 
 /// 是否正在转场动画中 (⚠️)
-@property (nonatomic, readwrite, getter = isViewTransitionInProgress) BOOL viewTransitionInProgress;
+@property (nonatomic, readwrite, getter = tm_isViewTransitionInProgress) BOOL tm_viewTransitionInProgress;
 
 @end
 

@@ -23,5 +23,6 @@
 #import "UIView+TMExtension.h"
 #import "UIView+TMLayout.h"
 #import "UIViewController+TMExtension.h"
+#import "UIGestureRecognizer+TMBlock.h"
 
 #endif /* TMUIKitExtensions_h */

@@ -21,6 +21,8 @@ typedef void(^TMProgressBlock)(NSProgress *progress);
 - (instancetype)init OBJC_UNAVAILABLE("use '+sharedManager' instead");
 + (instancetype)new OBJC_UNAVAILABLE("use '+sharedManager' instead");
 
+@property (nonatomic, assign, getter=isEnableMetrics) BOOL enableMetrics;
+
 - (NSUInteger)startRequest:(__kindof TMRequest *)request
             uploadProgress:(nullable TMProgressBlock)uploadProgress
           downloadProgress:(nullable TMProgressBlock)downloadProgress

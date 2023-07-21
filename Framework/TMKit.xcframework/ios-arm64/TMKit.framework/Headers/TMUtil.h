@@ -9,7 +9,7 @@
 #import "TMReachabilityManager.h"
 #endif
 
-#if __has_include("TMGCDTimerManager.h")
+#if __has_include("TMTimer.h")
 #import "TMGCDTimerManager.h"
 #import "TMTimer.h"
 #endif

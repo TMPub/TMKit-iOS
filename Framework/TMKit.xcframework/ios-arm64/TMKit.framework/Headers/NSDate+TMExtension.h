@@ -1,6 +1,6 @@
 //
 //  NSDate+TMExtension.h
-//  TMExtension
+//  TMExtensions
 //
 //  Created by TMKit on 2022/7/21.
 //
@@ -106,15 +106,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否在过去 n 天
 - (BOOL)tm_isDaysAgo:(NSInteger)days;
 
-/// 距离过期时间是否还有 N 天（是否在保质期内N天）
+/// 距离过期时间是否小于 N 天（是否在保质期内N天）
 /// @param date 过期时间
-/// @param days 过期时间N天内
-+ (BOOL)tm_isExpiredAtDate:(NSDate *)date afterDays:(NSInteger)days;
+/// @param days 距离过期时间的天数
++ (BOOL)tm_willExpiredAtDate:(NSDate *)date inDays:(NSInteger)days;
 
 /// 距离过期时间是否超过了 N 天（是否在保质期外N天）
 /// @param days 超过过期时间天数
 /// @param date 过期时间
-+ (BOOL)tm_isExpiredDays:(NSInteger)days expiredDate:(NSDate *)date;
++ (BOOL)tm_isExpiredOverDays:(NSInteger)days expiredDate:(NSDate *)date;
 
 #pragma mark - Compare
 /// 2个日期是否是同一天（相同时区下比较）

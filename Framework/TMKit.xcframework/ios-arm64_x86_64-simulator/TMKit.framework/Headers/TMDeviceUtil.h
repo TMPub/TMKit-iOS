@@ -1,6 +1,6 @@
 //
 //  TMDeviceUtil.h
-//  TMUtil
+//  TMDeviceUtil
 //
 //  Created by TMKit on 2022/6/16.
 //
@@ -27,14 +27,15 @@ typedef NS_ENUM(NSUInteger, TMDevicePerformance) {
 
 @property (nonatomic, copy, readonly) NSString *brand;
 @property (nonatomic, copy, readonly) NSString *os;
-@property (nonatomic, copy, readonly) NSString *osVersion;
-
-@property (nonatomic, copy, readonly) NSString *modelString;
+@property (nonatomic, copy, readonly) NSString *deviceModel;
 @property (nonatomic, assign, readonly) CGFloat screenSize;
+@property (nonatomic, assign, readonly) NSInteger numberOfCores;
+@property (nonatomic, assign, readonly) CGFloat l2CacheSize;
+@property (nonatomic, assign, readonly) CGFloat physicalMemory;
 
 @property (nonatomic, assign, readonly) CGFloat rom;
 @property (nonatomic, assign, readonly) CGFloat ram;
-@property (nonatomic, assign, readonly) NSInteger orientation;
+@property (nonatomic, assign, readonly) UIInterfaceOrientation orientation;
 @property (nonatomic, assign, readonly) UIApplicationState appState;
 @property (nonatomic, assign, readonly) TMDevicePerformance performanceLevel;
 
@@ -53,11 +54,63 @@ typedef NS_ENUM(NSUInteger, TMDevicePerformance) {
 
 + (NSTimeInterval)systemUptime;
 
++ (NSString *)recognizeIsoCountryCode;
+
 + (instancetype)shareUtil;
 
 + (NSString *)newUUID;
 
 + (NSString *)appName;
+
+/// 版本号
+- (NSString *)version;
+
++ (nullable NSString *)randomStringOfLength:(NSInteger)length;
+
+/// 编译号
+- (NSString *)buildNumber;
+
+#pragma mark - Os Version
+@property (nonatomic, copy, readonly) NSString *osVersionString;
+
+- (NSUInteger)osVersionMajor;
+- (NSUInteger)osVersionMinor;
+- (NSUInteger)osVersionPatch;
+
+/// 当前系统版本 等于 指定版本号
+/// - Parameter v: 指定版本号
+- (BOOL)isOsVersionEqualToVersion:(NSString *)v;
+
+/// 当前系统版本 大于 指定版本号
+/// - Parameter v: 指定版本号
+- (BOOL)isOsVersionGreaterThanVersion:(NSString *)v;
+
+/// 当前系统版本  大于或等于 指定版本号
+/// - Parameter v: 指定版本号
+- (BOOL)isOsVersionGreaterThanOrEqualToVersion:(NSString *)v;
+
+/// 当前系统版本  大于或等于 v1 小于v2
+/// - Parameters:
+///   - v1: 大于或等于该版本
+///   - v2: 小于该版本
+- (BOOL)isOsVersionGreaterThanOrEqualToVersion:(NSString *)v1 andLessThanVersion:(NSString *)v2;
+
+/// 当前系统版本 小于 指定版本号
+/// - Parameter v: 指定版本号
+- (BOOL)isOsVersionLessThanVersion:(NSString *)v;
+
+/// 当前系统版本 小于或等于 指定版本号
+/// - Parameter v: 指定版本号
+- (BOOL)isOsVersionLessThanOrEqualToVersion:(NSString *)v;
+
+/// 当前系统版本 在区间范围（两端都含等于逻辑）
+/// - Parameters:
+///   - v1: 大于或等于 该版本
+///   - v2: 小于或等于 该版本
+- (BOOL)isOsVersionBetweenVersion:(NSString *)v1 andVersion:(NSString *)v2;
+
+/// 状态栏高度
+- (CGFloat)statusBarHeightConstant;
 
 @end
 

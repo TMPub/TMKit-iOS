@@ -1,14 +1,12 @@
 //
 //  NSString+TMAES.h
-//  TMExtension
+//  TMExtensions
 //
 //  Created by TMKit on 2021/6/16.
 //  Copyright © 2021 TMKit. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (TMAES)
 
@@ -31,5 +29,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)tm_decryptAES128ECBUsingKey:(NSString *)key;
 
 @end
-
-NS_ASSUME_NONNULL_END

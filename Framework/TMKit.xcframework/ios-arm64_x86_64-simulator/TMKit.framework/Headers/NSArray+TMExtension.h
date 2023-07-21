@@ -41,6 +41,11 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (NSArray *)tm_mapWithBlock:(id (NS_NOESCAPE^)(ObjectType item))block;
 
+/**
+*  带下标转换数组元素，将每个 item 都经过 block 转换成一遍 返回转换后的新数组
+*/
+- (NSArray *)tm_mapIndexWithBlock:(id (NS_NOESCAPE^)(ObjectType item, NSInteger index))block;
+
 @end
 
 NS_ASSUME_NONNULL_END

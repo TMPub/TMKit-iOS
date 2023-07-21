@@ -1,6 +1,6 @@
 //
 //  UITableViewCell+TMExtension.h
-//  TMExtension
+//  TMExtensions
 //
 //  Created by TMKit on 2021/7/29.
 //

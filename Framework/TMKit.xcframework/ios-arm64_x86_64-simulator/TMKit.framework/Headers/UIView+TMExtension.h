@@ -1,6 +1,6 @@
 //
 //  UIView+TMExtension.h
-//  TMExtension
+//  TMExtensions
 //
 //  Created by TMKit on 2021/8/5.
 //
@@ -51,10 +51,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 设置不带离屏渲染的背景色 + 指定圆角
 - (void)tm_setNoneOffScreenRenderBgColor:(UIColor *)bgColor cornerRadius:(CGFloat)cornerRadius atCorners:(UIRectCorner)atCorners;
 
-- (UIView *)tm_findSubViewOfSubClassName:(NSString *)className;
+- (nullable UIView *)tm_findSubViewOfSubClassName:(NSString *)className;
 
 ///查找子类
-- (nullable UIView *)tm_findSubViewOfSubClass:(Class)class;
+- (nullable UIView *)tm_findSubViewOfSubClass:(Class)aclass;
 
 - (BOOL)tm_isActiveAndVisible;
 
@@ -72,9 +72,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (nullable UIView *)tm_findSuperViewOfClass:(Class)classname;
 
-- (UIViewController *)tm_currentViewController;
+- (nullable UIViewController *)tm_currentViewController;
 
 - (void)tm_animationShakeAgreementWithFeedBack:(BOOL)feedback;
+
+- (void)addSubviews:(NSArray<UIView *> *)views;
 
 @end
 

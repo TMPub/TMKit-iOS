@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     s.license             = { :type => 'MIT', :file => 'LICENSE' }
     s.author              = { 'jieyuan.zhuang' => 'jieyuan.zhuang@transsnet.com' }
     s.source              = { :http => 'https://github.com/TMPub/TMKit-iOS/archive/refs/tags/1.0.6.zip' }
-    s.vendored_frameworks = 'Framework/TMKit.xcframework'
+    s.vendored_frameworks = 'TMKit-iOS-1.0.6/Framework/TMKit.xcframework'
     
     s.platform            = :ios, '11.0'
     s.frameworks          = 'Foundation', 'UIKit', 'CoreGraphics'

@@ -52,6 +52,10 @@
 		<data>
 		ARPl1AJMHWsXL2bfEdbNBkVfi0U=
 		</data>
+		<key>Headers/NSObject+TMSemaphore.h</key>
+		<data>
+		b/HsnA5ELov7RJuavVRtUKCGa/Q=
+		</data>
 		<key>Headers/NSString+TMAES.h</key>
 		<data>
 		MAfuRjO4QawVPtavDdXcGwcGpqQ=
@@ -320,6 +324,10 @@
 		<data>
 		bLIvwUB8rPxogIXP04kDGpJKE04=
 		</data>
+		<key>Headers/UIGestureRecognizer+TMBlock.h</key>
+		<data>
+		JHSfDVjQEN44zqoHI0vXPREvBpk=
+		</data>
 		<key>Headers/UIImage+TMExtension.h</key>
 		<data>
 		oFGQNNhJ21wliwoomdCP+VzHbww=
@@ -517,6 +525,17 @@
 			<key>hash2</key>
 			<data>
 			MVbNXMAkNk8eYh5V+eyKHxTFzouwCtr3ed1TOuJxtvQ=
+			</data>
+		</dict>
+		<key>Headers/NSObject+TMSemaphore.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			b/HsnA5ELov7RJuavVRtUKCGa/Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			UeStQntNrL6iCmI1h1UpqkqSiSI9d/mtKy82HyI3SVk=
 			</data>
 		</dict>
 		<key>Headers/NSString+TMAES.h</key>
@@ -1254,6 +1273,17 @@
 			<key>hash2</key>
 			<data>
 			cu8ojq3gg5J+zNMc7BxmvfZIlYGrsCbKj+SHuBwhOPI=
+			</data>
+		</dict>
+		<key>Headers/UIGestureRecognizer+TMBlock.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JHSfDVjQEN44zqoHI0vXPREvBpk=
+			</data>
+			<key>hash2</key>
+			<data>
+			LXPkO4PeCJImAdXwJmTLV39y4IVttEVtQ9Rf/XbSdi8=
 			</data>
 		</dict>
 		<key>Headers/UIImage+TMExtension.h</key>
